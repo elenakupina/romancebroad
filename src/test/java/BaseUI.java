@@ -19,6 +19,6 @@ public class BaseUI {
 
     @AfterMethod
     public void afterActions() {
-        driver.quit();
+        //driver.quit();
     }
 }
