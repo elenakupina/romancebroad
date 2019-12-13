@@ -10,11 +10,12 @@ public class Locators {
     public static final By LINK_BLOG = By.cssSelector("a[href='https://romanceabroad.com/content/view/blog']");
     public static final By LINK_SIGN_IN = By.xpath("//a[@href='https://romanceabroad.com/users/login_form']");
     public static final By SEARCH_PRODUCT_FIELD = By.xpath("//input[@id='search_product']");
+    public static final By DROP_DOWN_LIST_SORT_BY = By.xpath("//div[@class='form-inline']//select");
     public static final By BUTTON_SEARCH = By.xpath("//button[@id='search_friend']");
-    public static final By LINK_REGISTRATION = By.cssSelector("#show-registration-block");
     public static final By BUTTON_HOME = By.xpath("//i[@class='fa fa-bars fa-lg item']");
 
     //registration page
+    public static final By LINK_REGISTRATION = By.cssSelector("#show-registration-block");
     public static final By TEXT_FIELD_EMAIL = By.cssSelector("input#email");
     public static final By TEXT_FIELD_PASSWORD = By.cssSelector("input#password");
     public static final By TEXT_FIELD_USERNAME = By.cssSelector("input#nickname");

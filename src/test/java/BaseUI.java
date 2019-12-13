@@ -1,5 +1,7 @@
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
@@ -19,6 +21,11 @@ public class BaseUI {
 
     @AfterMethod
     public void afterActions() {
-        //driver.quit();
+        driver.quit();
+    }
+
+    public void getDropDownListByText(By locator, String text) {
+        Select select = new Select(driver.findElement(locator));
+        select.selectByVisibleText(text);
     }
 }
