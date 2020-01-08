@@ -1,7 +1,10 @@
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
-public class MainPageTests extends  BaseUI{
+import java.util.concurrent.TimeUnit;
+
+public class MainPageTests extends BaseUI {
 
     @Test
     public void testMainPage() {
@@ -25,5 +28,12 @@ public class MainPageTests extends  BaseUI{
         driver.findElement(Locators.LINK_SEARCH);
         driver.findElement(Locators.LINK_REGISTRATION);
         driver.findElement(Locators.LINK_SIGN_IN);
+    }
+
+    @Test
+    public void testVideo() {
+        WebElement video = driver.findElement(Locators.LINK_VIDEO);
+        driver.switchTo().frame(video);
+        driver.findElement(Locators.BUTTON_PLAY_VIDEO).click();
     }
 }

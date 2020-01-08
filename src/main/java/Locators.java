@@ -13,6 +13,8 @@ public class Locators {
     public static final By DROP_DOWN_LIST_SORT_BY = By.xpath("//div[@class='form-inline']//select");
     public static final By BUTTON_SEARCH = By.xpath("//button[@id='search_friend']");
     public static final By BUTTON_HOME = By.xpath("//i[@class='fa fa-bars fa-lg item']");
+    public static final By LINK_VIDEO = By.xpath("//iframe[@src=\"https://www.youtube.com/embed/RRECuJzm3IY?start=85\"]");
+    public static final By BUTTON_PLAY_VIDEO = By.xpath("//button[@class='ytp-large-play-button ytp-button']");
 
     //registration page
     public static final By LINK_REGISTRATION = By.cssSelector("#show-registration-block");
