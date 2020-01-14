@@ -5,6 +5,7 @@ public class Data {
     public static final String password = "12345678";
     public static final String username = "Elena";
     public static final String phone = "7029577777";
+    public static final int index = 7;
 
     public static final String expectedUrlBlog = "https://romanceabroad.com/content/view/blog";
     public static final String expectedUrlGifts = "https://romanceabroad.com/store/category-sweets";

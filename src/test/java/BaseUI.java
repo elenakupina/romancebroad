@@ -24,7 +24,7 @@ public class BaseUI {
 
     @AfterMethod
     public void afterActions() {
-        driver.quit();
+        //driver.quit();
     }
 
     public void getDropDownListByText(By locator, String text) {
