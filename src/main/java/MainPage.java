@@ -30,31 +30,31 @@ public class MainPage extends BaseActions {
         wait.until(ExpectedConditions.visibilityOf(driver.findElement(Locators.TEXT_FIELD_PHONE)));
         driver.findElement(Locators.TEXT_FIELD_PHONE).sendKeys(Data.phone);
 
-        List<WebElement> daysList = driver.findElements(By.xpath("//li[@data-handler='selectDay']"));
-        driver.findElement(By.cssSelector("#daySelect")).click();
+        List<WebElement> daysList = driver.findElements(Locators.DAYS_LIST);
+        driver.findElement(Locators.DAY_SELECT).click();
         for (WebElement day: daysList) {
-            if( day.getText().contains("3")) {
+            if( day.getText().contains(Data.day)) {
                 day.click();
             }
         }
 
-        List<WebElement> monthsList = driver.findElements(By.xpath("//li[@data-handler='selectMonth']"));
-        driver.findElement(By.cssSelector("#monthSelect")).click();
+        List<WebElement> monthsList = driver.findElements(Locators.MONTHS_LIST);
+        driver.findElement(Locators.MONTH_SELECT).click();
         for (WebElement month: monthsList) {
-            if( month.getText().contains("May")) {
+            if( month.getText().contains(Data.month)) {
                 month.click();
             }
         }
 
-        List<WebElement> yearsList = driver.findElements(By.xpath("//li[@data-handler='selectYear']"));
-        driver.findElement(By.cssSelector("#yearSelect")).click();
+        List<WebElement> yearsList = driver.findElements(Locators.YEARS_LIST);
+        driver.findElement(Locators.YEAR_SELECT).click();
         for (WebElement year: yearsList) {
-            if( year.getText().contains("1999")) {
+            if( year.getText().contains(Data.year)) {
                 year.click();
             }
         }
 
-        WebElement checkBoxConformation = driver.findElement(By.cssSelector("input#confirmation"));
+        WebElement checkBoxConformation = driver.findElement(Locators.CHECKBOX_CONFORMATION);
         boolean selectedCheckbox = checkBoxConformation.isSelected();
         checkBoxConformation.click();
     }

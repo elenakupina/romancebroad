@@ -25,4 +25,11 @@ public class Locators {
     public static final By BUTTON_REGISTRATION = By.cssSelector("button#show-registration-block");
     public static final By BUTTON_NEXT = By.xpath("//button[@data-action='next-page'][text()='Next']");
     public static final By DAY_SELECT = By.cssSelector("#daySelect");
+    public static final By MONTH_SELECT = By.cssSelector("#monthSelect");
+    public static final By YEAR_SELECT = By.cssSelector("#yearSelect");
+    public static final By YEARS_LIST = By.xpath("//li[@data-handler='selectYear']");
+    public static final By MONTHS_LIST = By.xpath("//li[@data-handler='selectMonth']");
+    public static final By DAYS_LIST = By.xpath("//li[@data-handler='selectDay']");
+    public static final By CHECKBOX_CONFORMATION = By.cssSelector("input#confirmation");
+
 }
