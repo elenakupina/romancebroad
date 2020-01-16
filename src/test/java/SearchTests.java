@@ -1,3 +1,4 @@
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -8,6 +9,7 @@ public class SearchTests extends BaseUI {
         driver.findElement(Locators.LINK_SEARCH).click();
         currentUrl = driver.getCurrentUrl();
         Assert.assertEquals(currentUrl, Data.expectedUrlSearch);
-        getDropDownListByText(Locators.DROP_DOWN_LIST_SORT_BY, "Views");
+        WebElement dropDownListSortBy = driver.findElement(Locators.DROP_DOWN_LIST_SORT_BY);
+        searchPage.getDropDownListByText(dropDownListSortBy, "Views");
     }
 }

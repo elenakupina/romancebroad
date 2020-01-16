@@ -24,4 +24,5 @@ public class Locators {
     public static final By TEXT_FIELD_PHONE = By.cssSelector("input[name='data[phone]'");
     public static final By BUTTON_REGISTRATION = By.cssSelector("button#show-registration-block");
     public static final By BUTTON_NEXT = By.xpath("//button[@data-action='next-page'][text()='Next']");
+    public static final By DAY_SELECT = By.cssSelector("#daySelect");
 }
