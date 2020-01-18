@@ -1,4 +1,3 @@
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -32,30 +31,32 @@ public class MainPage extends BaseActions {
 
         List<WebElement> daysList = driver.findElements(Locators.DAYS_LIST);
         driver.findElement(Locators.DAY_SELECT).click();
-        for (WebElement day: daysList) {
-            if( day.getText().contains(Data.day)) {
+        for (WebElement day : daysList) {
+            if (day.getText().contains(Data.day)) {
                 day.click();
             }
         }
 
         List<WebElement> monthsList = driver.findElements(Locators.MONTHS_LIST);
         driver.findElement(Locators.MONTH_SELECT).click();
-        for (WebElement month: monthsList) {
-            if( month.getText().contains(Data.month)) {
+        for (WebElement month : monthsList) {
+            if (month.getText().contains(Data.month)) {
                 month.click();
             }
         }
 
         List<WebElement> yearsList = driver.findElements(Locators.YEARS_LIST);
         driver.findElement(Locators.YEAR_SELECT).click();
-        for (WebElement year: yearsList) {
-            if( year.getText().contains(Data.year)) {
+        for (WebElement year : yearsList) {
+            if (year.getText().contains(Data.year)) {
                 year.click();
             }
         }
 
         WebElement checkBoxConformation = driver.findElement(Locators.CHECKBOX_CONFORMATION);
-        boolean selectedCheckbox = checkBoxConformation.isSelected();
-        checkBoxConformation.click();
+        if (!checkBoxConformation.isSelected()) {
+            checkBoxConformation.click();
+            System.out.println("checkbox is selected");
+        }
     }
 }

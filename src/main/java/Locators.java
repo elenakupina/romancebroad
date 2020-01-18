@@ -15,6 +15,7 @@ public class Locators {
     public static final By BUTTON_HOME = By.xpath("//a[@class='uam-top link-open-menu btn-slide']");
     public static final By LINK_VIDEO = By.xpath("//iframe[@src='https://www.youtube.com/embed/RRECuJzm3IY?start=85']");
     public static final By BUTTON_PLAY_VIDEO = By.xpath("//button[@class='ytp-large-play-button ytp-button']");
+    public static final By LIST_TAB_LINKS = By.xpath("//ul[@class='navbar-nav']//li");
 
     //registration page
     public static final By LINK_REGISTRATION = By.cssSelector("#show-registration-block");
@@ -31,5 +32,4 @@ public class Locators {
     public static final By MONTHS_LIST = By.xpath("//li[@data-handler='selectMonth']");
     public static final By DAYS_LIST = By.xpath("//li[@data-handler='selectDay']");
     public static final By CHECKBOX_CONFORMATION = By.cssSelector("input#confirmation");
-
 }
