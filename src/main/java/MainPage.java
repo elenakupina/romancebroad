@@ -1,3 +1,4 @@
+import com.sun.tools.javac.util.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -51,12 +52,6 @@ public class MainPage extends BaseActions {
             if (year.getText().contains(Data.year)) {
                 year.click();
             }
-        }
-
-        WebElement checkBoxConformation = driver.findElement(Locators.CHECKBOX_CONFORMATION);
-        if (!checkBoxConformation.isSelected()) {
-            checkBoxConformation.click();
-            System.out.println("checkbox is selected");
         }
     }
 }

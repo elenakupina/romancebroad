@@ -14,7 +14,10 @@ public class Data {
     public static final String expectedUrlGifts = "https://romanceabroad.com/store/category-sweets";
     public static final String expectedUrlHowItWorks = "https://romanceabroad.com/content/view/how-it-works";
     public static final String expectedUrlMedia = "https://romanceabroad.com/media/index";
-    public static final String expectedUrlSearch = "https://romanceabroad.com/users/search";
+    public static final String expectedUrlSearch = "https://romanceabroad.com/users";
     public static final String expectedUrlTour = "https://romanceabroad.com/store/sweets/20-tour_to_ukraine";
+    public static final String expectedUrlPrettyWomen = "https://romanceabroad.com/users/search";
+    public static final String expectedTitleHowWeWork = "Ukrainian women for marriage";
+    public static final String expectedTitlePrettyWomen = "Single Ukrainian women online";
     public static final String MAIN_URL = "https://romanceabroad.com/";
 }
