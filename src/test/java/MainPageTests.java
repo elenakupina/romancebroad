@@ -38,7 +38,7 @@ public class MainPageTests extends BaseUI {
                 actualUrlPrettyWomen = driver.getCurrentUrl();
                 Assert.assertEquals(Data.expectedTitlePrettyWomen, actualTitle);
                 Assert.assertEquals(actualUrlPrettyWomen, Data.expectedUrlPrettyWomen);
-                driver.findElement(By.xpath("//a[@class='g-pic-border g-rounded']")).isDisplayed();
+                driver.findElement(Locators.IMAGES).isDisplayed();
             }
 
             driver.get(Data.MAIN_URL);
