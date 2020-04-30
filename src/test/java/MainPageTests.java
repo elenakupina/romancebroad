@@ -1,4 +1,3 @@
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -28,6 +27,7 @@ public class MainPageTests extends BaseUI {
             String info = links.get(i).getText();
             System.out.println(info);
             links.get(i).click();
+            driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
 
             if(info.contains("WORK")) {
                 actualTitle = driver.findElement(Locators.TITLE_OF_PAGE).getText();
