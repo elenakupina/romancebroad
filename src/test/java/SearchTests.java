@@ -15,4 +15,18 @@ public class SearchTests extends BaseUI {
         searchPage.getDropDownListByText(dropDownListSortBy, "Views");
         softAssert.assertAll("wrong url");
     }
+
+    @Test
+    public void selectRandomDropDownList() {
+        driver.findElement(Locators.LINK_SEARCH).click();
+        mainPage.javaWaitSec(3);
+
+        int sizeOfDropDownListSortBy = searchPage.getSizeDropDownList(Locators.DROP_DOWN_MAX_AGE);
+        System.out.println(sizeOfDropDownListSortBy);
+
+        for (int i = 0; i < sizeOfDropDownListSortBy; i++) {
+            searchPage.selectItemDropDownRandomOption(Locators.DROP_DOWN_MAX_AGE, "Sort by");
+            mainPage.javaWaitSec(3);
+        }
+    }
 }

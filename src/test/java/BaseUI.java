@@ -31,6 +31,7 @@ public class BaseUI {
             WebDriverManager.firefoxdriver().setup();
             driver = new FirefoxDriver();
             wait = new WebDriverWait(driver, 20);
+            //driver.get("firefox://settings/clearBrowserData");
         }
         // Check if parameter passed as 'chrome'
         else if (browser.equalsIgnoreCase("chrome")) {

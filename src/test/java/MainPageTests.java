@@ -29,11 +29,11 @@ public class MainPageTests extends BaseUI {
             links.get(i).click();
             driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
 
-            if(info.contains("WORK")) {
+            if (info.contains("WORK")) {
                 actualTitle = driver.findElement(Locators.TITLE_OF_PAGE).getText();
                 Assert.assertEquals(Data.expectedTitleHowWeWork, actualTitle);
             }
-            if(info.contains("PRETTY WOMEN")) {
+            if (info.contains("PRETTY WOMEN")) {
                 actualTitle = driver.findElement(Locators.TITLE_OF_PAGE).getText();
                 actualUrlPrettyWomen = driver.getCurrentUrl();
                 Assert.assertEquals(Data.expectedTitlePrettyWomen, actualTitle);
@@ -44,5 +44,14 @@ public class MainPageTests extends BaseUI {
             driver.get(Data.MAIN_URL);
             links = driver.findElements(Locators.TAB_OF_MAIN_PAGE);
         }
+    }
+
+    @Test
+    public void testLinksOnMainPage() {
+        mainPage.checkLinksOnWebPage("//a", "href");
+        mainPage.checkLinksOnWebPage("//img", "src");
+        driver.findElement(Locators.LINK_SEARCH);
+        mainPage.checkLinksOnWebPage("//a", "href");
+        mainPage.checkLinksOnWebPage("//img", "src");
     }
 }

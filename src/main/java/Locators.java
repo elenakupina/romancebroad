@@ -3,14 +3,12 @@ import org.openqa.selenium.By;
 public class Locators {
 
     public static final By LINK_HOW_WE_WORK = By.xpath("//a[@href='https://romanceabroad.com/content/view/how-it-works']");
-    public static final By LINK_SEARCH = By.cssSelector("a[href='https://romanceabroad.com/users/search']");
     public static final By LINK_MEDIA = By.cssSelector("a[href='https://romanceabroad.com/media/index']");
     public static final By LINK_GIFTS = By.cssSelector("a[href='https://romanceabroad.com/store/category-sweets']");
     public static final By LINK_TOUR = By.cssSelector("a[href='https://romanceabroad.com/store/sweets/20-tour_to_ukraine']");
     public static final By LINK_BLOG = By.cssSelector("a[href='https://romanceabroad.com/content/view/blog']");
     public static final By LINK_SIGN_IN = By.xpath("//a[@href='https://romanceabroad.com/users/login_form']");
     public static final By SEARCH_PRODUCT_FIELD = By.xpath("//input[@id='search_product']");
-    public static final By DROP_DOWN_LIST_SORT_BY = By.xpath("//div[@class='form-inline']//select");
     public static final By BUTTON_SEARCH = By.xpath("//button[@id='search_friend']");
     public static final By BUTTON_HOME = By.xpath("//a[@class='uam-top link-open-menu btn-slide']");
     public static final By LINK_VIDEO = By.xpath("//iframe[@src='https://www.youtube.com/embed/RRECuJzm3IY?start=85']");
@@ -34,4 +32,11 @@ public class Locators {
     public static final By MONTHS_LIST = By.xpath("//li[@data-handler='selectMonth']");
     public static final By DAYS_LIST = By.xpath("//li[@data-handler='selectDay']");
     public static final By CHECKBOX_CONFORMATION = By.cssSelector("input#confirmation");
+
+    //Search page
+    public static final By LINK_SEARCH = By.cssSelector("a[href='https://romanceabroad.com/users/search']");
+    public static final By DROP_DOWN_LIST_SORT_BY = By.xpath("//div[@class='form-inline']//select");
+    public static final By DROP_DOWN_MAX_AGE = By.cssSelector("select#age_max");
+
+
 }
